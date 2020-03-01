@@ -1,6 +1,5 @@
 package Forum;
 
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,7 +16,7 @@ public class ForumUserTestSuite {
     public void testGetUsername() {
         //Given
         ApplicationContext context =
-                new AnnotationConfigApplicationContext("com.kodilla.spring");
+                new AnnotationConfigApplicationContext("Forum");
         ForumUser forumUser = context.getBean(ForumUser.class);
 
         //When
