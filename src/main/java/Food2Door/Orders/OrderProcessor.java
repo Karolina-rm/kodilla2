@@ -1,9 +1,10 @@
-package Food2Door;
+package Food2Door.Orders;
+
+import Food2Door.Services.InformationService;
 
 public class OrderProcessor {
 
     private InformationService informationService;
-    private OrderService orderService;
     private OrderRepository orderRepository;
 
     public OrderProcessor(InformationService informationService,

@@ -1,4 +1,4 @@
-package Food2Door;
+package Food2Door.Orders;
 
 public class User {
 

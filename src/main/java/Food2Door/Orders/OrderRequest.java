@@ -1,6 +1,5 @@
-package Food2Door;
+package Food2Door.Orders;
 
-import com.sun.org.apache.xpath.internal.operations.Or;
 
 import java.time.LocalDate;
 
@@ -9,9 +8,9 @@ public class OrderRequest {
     private User user;
     private Order order;
     private LocalDate orderDate;
-    private Companies companyName;
+    private Company companyName;
 
-    public OrderRequest (User user, Order order, LocalDate orderDate, Companies companyName) {
+    public OrderRequest (User user, Order order, LocalDate orderDate, Company companyName) {
 
         this.user = user;
         this.order = order;
@@ -31,7 +30,7 @@ public class OrderRequest {
         return orderDate;
     }
 
-    public Companies getCompanyName() {
+    public Company getCompanyName() {
         return companyName;
     }
 }

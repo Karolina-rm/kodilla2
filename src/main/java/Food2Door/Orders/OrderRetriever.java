@@ -1,6 +1,4 @@
-package Food2Door;
-
-import com.sun.org.apache.xpath.internal.operations.Or;
+package Food2Door.Orders;
 
 import java.time.LocalDate;
 
@@ -12,7 +10,7 @@ public class OrderRetriever {
         User userExtraFoodShop = new User("Anna", "Nowak");
         Order orderExtraFoodShop = new Order("Honey", 15.10, 1);
         LocalDate dateExtraFoodShop = LocalDate.now();
-        Companies company = new Companies("Extra Food Shop");
+        Company company = new Company(OrderCompanies.EXTRAFOODSHOP);
 
 
         return new OrderRequest (userExtraFoodShop, orderExtraFoodShop, dateExtraFoodShop, company);
@@ -23,7 +21,7 @@ public class OrderRetriever {
         User userGlutenFreeShop = new User("Kamil", "Nowak");
         Order orderGlutenFreeShop = new Order("Apple", 2.20, 1);
         LocalDate dateGlutenFreeShop = LocalDate.now();
-        Companies company = new Companies("Gluten Free Shop");
+        Company company = new Company(OrderCompanies.GLUTENFREESHOP);
 
         return new OrderRequest (userGlutenFreeShop, orderGlutenFreeShop, dateGlutenFreeShop, company);
     }
@@ -33,7 +31,7 @@ public class OrderRetriever {
         User userHealthyShop = new User("Maja", "Nowak");
         Order orderHealthyShop = new Order("Milk", 4.50, 1);
         LocalDate dateHealthyShop = LocalDate.now();
-        Companies company = new Companies("Healthy Shop");
+        Company company = new Company(OrderCompanies.HEALTHYSHOP);
 
         return new OrderRequest (userHealthyShop, orderHealthyShop, dateHealthyShop, company);
     }
