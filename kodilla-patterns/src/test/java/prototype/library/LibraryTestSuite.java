@@ -8,7 +8,7 @@ import java.time.LocalDate;
 public class LibraryTestSuite {
 
     @Test
-    public void testGetBooks() {
+    public void testGetBooks() throws CloneNotSupportedException {
 
         //Given
         Library library = new Library("My Library");
@@ -23,21 +23,14 @@ public class LibraryTestSuite {
         //When
         //making a shallow copy of object board
         Library clonedLibrary = null;
-        try {
-            clonedLibrary = library.shallowCopy();
-            clonedLibrary.setName("Project number 2");
-        } catch (CloneNotSupportedException e) {
-            System.out.println(e);
-        }
+        clonedLibrary = library.shallowCopy();
+        clonedLibrary.setName("Project number 2");
 
         //making a deep copy of object board
         Library deepClonedLibrary = null;
-        try {
-            deepClonedLibrary = library.deepCopy();
-            deepClonedLibrary.setName("Project number 3");
-        } catch (CloneNotSupportedException e) {
-            System.out.println(e);
-        }
+        deepClonedLibrary = library.deepCopy();
+        deepClonedLibrary.setName("Project number 3");
+
 
         //Then
         Assert.assertEquals(3, library.getBooks().size());
