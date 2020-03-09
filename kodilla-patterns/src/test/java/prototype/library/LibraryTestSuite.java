@@ -31,9 +31,11 @@ public class LibraryTestSuite {
         deepClonedLibrary = library.deepCopy();
         deepClonedLibrary.setName("Project number 3");
 
-
+        library.removeBook(book3);
         //Then
-        Assert.assertEquals(3, library.getBooks().size());
+        Assert.assertEquals(2, library.getBooks().size());
+        Assert.assertEquals(2, clonedLibrary.getBooks().size());
+        Assert.assertEquals(3, deepClonedLibrary.getBooks().size());
     }
 }
 
