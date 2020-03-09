@@ -24,13 +24,13 @@ public class Bigmac {
         private List<String> ingredients = new ArrayList<>();
 
         public BigmacBuilder bun(String bun) {
-        this.bun = bun;
-        return this;
+            this.bun = bun;
+            return this;
         }
 
         public BigmacBuilder burgersQuantity(int burgersQuantity) {
-        this.burgersQuantity = burgersQuantity;
-        return this;
+            this.burgersQuantity = burgersQuantity;
+            return this;
         }
 
         public BigmacBuilder sauce(String sauce) {
