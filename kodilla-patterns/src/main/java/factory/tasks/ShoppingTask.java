@@ -2,9 +2,9 @@ package factory.tasks;
 
 public class ShoppingTask implements Task {
 
-    final String taskName;
-    final String whatToBuy;
-    final double quantity;
+    private final String taskName;
+    private final String whatToBuy;
+    private final double quantity;
     boolean isExecuted;
 
     public ShoppingTask(String taskName, String whatToBuy, double quantity, boolean isExecuted) {

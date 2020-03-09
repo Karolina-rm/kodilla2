@@ -2,9 +2,9 @@ package factory.tasks;
 
 public class PaintingTask implements Task {
 
-    final String taskName;
-    final String color;
-    final String whatToPaint;
+    private final String taskName;
+    private final String color;
+    private final String whatToPaint;
     private boolean isExecuted;
 
     public PaintingTask(String taskName, String color, String whatToPaint, boolean isExecuted) {
