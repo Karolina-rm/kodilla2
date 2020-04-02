@@ -1,4 +1,8 @@
 rootProject.name = 'kodilla-good-patterns'
 include 'kodilla-spring'
+include 'kodilla-jdbc'
+include 'kodilla-patterns'
+include 'kodilla-hibernate'
+
 
 
