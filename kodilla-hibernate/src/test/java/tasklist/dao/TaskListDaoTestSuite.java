@@ -19,25 +19,25 @@ public class TaskListDaoTestSuite {
 
     private static final String LISTNAME = "Test: Practice Hibernate";
     private static final String NAME1 = "Test 1";
-    private static final String NAME2 = "Test 2";
 
     @Test
     public void testFindByListName() {
+
         //Given
-        TaskList taskList1 = new TaskList(LISTNAME, NAME1);
-        TaskList taskList2 = new TaskList(LISTNAME, NAME2);
+        TaskList taskList = new TaskList(LISTNAME, NAME1);
+        taskListDao.save(taskList);
+        String listName = taskList.getListName();
 
         //When
-        taskListDao.save(taskList1);
-        taskListDao.save(taskList2);
+        List<TaskList> readLists = taskListDao.findByListName(listName);
 
         //Then
-        List<TaskList> readTaskList = taskListDao.findByListName(LISTNAME);
-        Assert.assertEquals(2, readTaskList.size());
+        Assert.assertEquals(1, readLists.size());
 
         //CleanUp
-        taskListDao.delete(taskList1);
-        taskListDao.delete(taskList2);
+        int idToRemove = readLists.get(0).getId();
+        taskListDao.deleteById(idToRemove);
 
     }
-}
+    }
+

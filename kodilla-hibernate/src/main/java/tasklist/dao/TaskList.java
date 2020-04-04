@@ -1,9 +1,6 @@
 package tasklist.dao;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Entity
@@ -27,8 +24,9 @@ public class TaskList {
     }
 
     @Id
+    @GeneratedValue
     @NotNull
-    @Column(name = "ID")
+    @Column(name = "ID", unique = true)
     public int getId() {
         return id;
     }
