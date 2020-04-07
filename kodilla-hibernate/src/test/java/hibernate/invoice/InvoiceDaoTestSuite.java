@@ -41,9 +41,14 @@ public class InvoiceDaoTestSuite {
         //When
         invoiceDao.save(invoice);
         int id = invoice.getId();
+        int itemSize = invoice.getItems().size();
+        Invoice invoiceRead = invoiceDao.findById(id);
 
         //Then
         Assert.assertNotEquals(0, id);
+        Assert.assertEquals(2, itemSize);
+        Assert.assertEquals(id, invoiceRead.getId());
+        Assert.assertEquals(itemSize, invoiceRead.getItems().size());
 
         //CleanUp
         invoiceDao.deleteById(id);
