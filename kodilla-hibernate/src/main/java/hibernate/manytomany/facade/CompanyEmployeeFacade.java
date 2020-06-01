@@ -20,7 +20,7 @@ public class CompanyEmployeeFacade {
         return companyDao.retrieveCompanyNameLike(fragmentOfTheName);
     }
 
-    public List<Employee> retrieveEmployeeLike(String fragmentOfTheName){
+    public List<Employee> retrieveEmployeeNameLike(String fragmentOfTheName){
         return employeeDao.retrieveEmployeeNameLike(fragmentOfTheName);
     }
 }
