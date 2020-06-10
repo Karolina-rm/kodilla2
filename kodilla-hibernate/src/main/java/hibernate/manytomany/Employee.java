@@ -12,13 +12,13 @@ import java.util.List;
 )
 
 
-
 @Entity
 @Table(name = "EMPLOYEES")
 public class Employee {
     private int id;
     private String firstname;
     private String lastname;
+
     private List<Company> companies = new ArrayList<>();
 
     public Employee() {
