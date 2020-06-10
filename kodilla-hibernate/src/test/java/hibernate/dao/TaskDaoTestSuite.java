@@ -1,6 +1,6 @@
-package task.dao;
+package hibernate.dao;
 
-import financial.dao.TaskFinancialDetails;
+import hibernate.financial.dao.TaskFinancialDetails;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
