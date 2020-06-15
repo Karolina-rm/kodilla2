@@ -1,4 +1,4 @@
-package tasklist.dao;
+package hibernate.tasklist.dao;
 
 import org.junit.Assert;
 import org.junit.Test;

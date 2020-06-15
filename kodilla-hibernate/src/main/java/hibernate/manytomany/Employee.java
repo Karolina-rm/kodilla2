@@ -5,10 +5,12 @@ import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
-@NamedQuery(
-        name = "Employee.retrieveEmployeesWithLastname",
-        query = "FROM Employee WHERE lastname LIKE :LASTNAME"
+@NamedNativeQuery(
+        name = "Employee.retrieveEmployeeNameLike",
+        query = "SELECT * FROM EMPLOYEES WHERE LASTNAME LIKE CONCAT('%', :LASTNAME , '%')",
+        resultClass = Employee.class
 )
+
 
 @Entity
 @Table(name = "EMPLOYEES")
@@ -16,7 +18,8 @@ public class Employee {
     private int id;
     private String firstname;
     private String lastname;
-    private List<Company> companies = new ArrayList<>(); //lista firm, w których zatrudniony jest pracownik
+
+    private List<Company> companies = new ArrayList<>();
 
     public Employee() {
     }
