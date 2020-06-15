@@ -1,4 +1,4 @@
-package task.dao;
+package tasklist.dao;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
@@ -8,6 +8,7 @@ import java.util.List;
 
 @Transactional
 @Repository
-public interface TaskDao extends CrudRepository<Task, Integer> {
-    List<Task> findByDuration (int duration);
+public interface TaskListDao extends CrudRepository<TaskList, Integer> {
+    List<TaskList> findByListName(String listName);
+
 }
